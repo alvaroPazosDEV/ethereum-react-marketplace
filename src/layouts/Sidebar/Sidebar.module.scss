@@ -1,0 +1,34 @@
+.overlay {
+  position: fixed;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out 0s;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  z-index: 70;
+  .outterArea {
+    flex: 1;
+  }
+  .content {
+    width: 30rem;
+    background-color: var(--negative-bg-color);
+    border-left: 1px solid var(--alternative-bg-color);
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    .content {
+      width: 85%;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.container {
+  background-color: var(--main-bg-color);
+  display: flex;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--alternative-border-color);
+  position: sticky;
+  top: 0;
+  .left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: transparent;
+      border: 0;
+      .logoContainer {
+        background-color: var(--negative-text-color);
+        display: flex;
+        border-radius: 2rem;
+        .logoImage {
+          width: 3rem;
+          height: auto;
+        }
+      }
+      .logoText {
+        display: flex;
+        margin: 0;
+        margin-left: 1rem;
+        color: var(--negative-text-color);
+        font-size: 1.5rem;
+        font-weight: 900;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    .options {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      > div {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+        margin: 0 1rem;
+        cursor: pointer;
+      }
+      > li {
+        margin: 0 1rem;
+      }
+    }
+    .toggleButton {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.collapsedOptions {
+  display: none;
+  background-color: var(--secondary-bg-color);
+}
+
+.walletText {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .options {
+    display: none !important;
+  }
+  .container {
+    padding: 1rem 2rem;
+  }
+  .toggleButton {
+    display: flex !important;
+  }
+  .collapsedOptions {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    li {
+      margin: 0.5rem 2rem;
+      padding: 0.5rem 0;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0.5rem 2rem;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      p {
+        display: inline-block;
+        margin: 0 0 0 0.5rem;
+        font-size: 1.2rem;
+        color: var(--main-text-color);
+      }
+      p:hover {
+        color: var(--negative-text-color);
+        font-weight: 500;
+      }
+    }
+  }
+}

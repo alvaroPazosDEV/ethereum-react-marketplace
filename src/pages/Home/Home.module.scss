@@ -1,0 +1,8 @@
+.container {
+  flex: 1;
+  padding: 2rem 4rem;
+  > h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  color: var(--main-text-color);
+  border: 1px solid var(--alternative-bg-color);
+  flex: 1;
+  padding: 4px 15px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  p {
+    font-family: poppins;
+    font-size: 14px;
+    margin-left: 15px;
+    font-weight: 700;
+    flex: 1;
+    text-align: left;
+  }
+  label {
+    font-family: poppins;
+    font-size: 12px;
+    padding: 4px 10px;
+    background-color: var(--alternative-text-color);
+    border-radius: 8px;
+  }
+}
+
+.container:hover {
+  background-color: var(--secondary-bg-color);
+}

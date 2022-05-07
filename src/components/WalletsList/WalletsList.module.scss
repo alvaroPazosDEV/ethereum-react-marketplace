@@ -1,0 +1,23 @@
+.container {
+  p {
+    font-size: 16px;
+    b {
+      color: var(--alternative-border-color);
+    }
+  }
+  .wallets {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 1.5rem 0;
+  }
+  .wallets > button:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .wallets > button:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}

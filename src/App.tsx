@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from 'layouts/Navbar';
+import Home from 'pages/Home';
+import Collection from 'pages/Collection';
+import CreateToken from 'pages/CreateToken';
+import WalletSidebar from 'layouts/WalletSidebar';
+import { useAppSelector } from 'context/hooks';
+import LoadingModal from 'layouts/LoadingModal';
+import SellToken from 'pages/SellToken';
 
 function App() {
+  const [showSidebar, setShowSidebar] = useState(false);
+  const loading = useAppSelector((state) => state.loading);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar onClickWallet={() => setShowSidebar(!showSidebar)} />
+      <WalletSidebar show={showSidebar} onClose={() => setShowSidebar(false)} />
+      {loading.show && <LoadingModal message={loading.message} />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/my-collection" element={<Collection />} />
+        <Route path="/my-collection/sell" element={<SellToken />} />
+        <Route path="/create-token" element={<CreateToken />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

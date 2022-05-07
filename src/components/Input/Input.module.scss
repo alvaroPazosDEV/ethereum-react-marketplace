@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  > label {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  > input {
+    font-size: 1rem;
+    background-color: var(--alternative-bg-color);
+    color: var(--negative-text-color);
+    padding: 0.8rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--alternative-bg-color);
+    font-family: Poppins;
+  }
+  > input:focus {
+    outline: none;
+  }
+}
+
+.container > input:hover {
+  background-color: var(--secondary-bg-color);
+}
+
+.imageContainer {
+  border: 2px dashed var(--main-text-color);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.imageContainer > svg {
+  margin: 4rem 6rem;
+}
+
+.imageContainer:hover {
+  background-color: var(--secondary-bg-color);
+}
+
+.image > img {
+  width: 20rem;
+  height: 15rem;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+}
+
+.image > button {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--negative-text-color);
+  font-size: 16px;
+  padding: 10px 0;
+  font-family: 'Poppins';
+}

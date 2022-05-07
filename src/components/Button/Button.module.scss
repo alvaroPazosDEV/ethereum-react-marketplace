@@ -1,0 +1,18 @@
+.container {
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--main-bg-color);
+  color: var(--negative-text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.container:hover {
+  background-color: var(--alternative-text-color);
+}

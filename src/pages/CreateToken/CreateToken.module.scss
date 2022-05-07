@@ -1,0 +1,25 @@
+.container {
+  background-color: var(--negative-bg-color);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  .form {
+    width: 60rem;
+    padding: 2rem 0;
+    .formTitle {
+      font-size: 2.5rem;
+    }
+    > div {
+      margin: 2rem 0;
+    }
+    > button {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container .form {
+    width: 90%;
+  }
+}

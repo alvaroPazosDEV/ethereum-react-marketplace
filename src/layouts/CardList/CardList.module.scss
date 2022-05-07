@@ -1,0 +1,39 @@
+.container {
+  > div:nth-child(1) {
+    margin: 1.5rem 0;
+    max-width: 35rem;
+  }
+  > p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .cards {
+    display: grid;
+    grid-gap: 3rem;
+    padding: 2rem 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1300px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1600px) {
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

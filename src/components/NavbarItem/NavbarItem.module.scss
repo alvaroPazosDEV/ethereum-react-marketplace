@@ -1,0 +1,11 @@
+.container {
+  list-style-type: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--main-text-color);
+}
+
+.container:hover {
+  color: var(--negative-text-color);
+  font-weight: 500;
+}
