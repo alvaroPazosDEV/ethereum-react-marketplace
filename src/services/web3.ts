@@ -203,7 +203,6 @@ const web3 = {
       }
       return marketData;
     } catch (error) {
-      console.log('Error: ', error);
       return null;
     }
   },
